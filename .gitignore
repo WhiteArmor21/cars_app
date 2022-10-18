@@ -1,0 +1,14 @@
+# cache
+*.pyc
+
+*.idea
+
+# env
+/app/env
+/venv
+
+# migrations
+/migrations
+
+# media
+/media
