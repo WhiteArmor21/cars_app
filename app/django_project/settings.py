@@ -21,8 +21,9 @@ DEBUG = int(environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS').split(' ')
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = ['http://62.113.107.56:8080', ]
+
+CSRF_TRUSTED_ORIGINS = ['http://62.113.107.56:8080', ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
