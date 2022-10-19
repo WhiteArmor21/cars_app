@@ -12,8 +12,6 @@ then
     echo "Postgres запущен"
 fi
 
-python manage.py makemigrations products
-python manage.py migrate --noinput
 python manage.py collectstatic --no-input --clear
 
 if [ "$DJANGO_SUPERUSER_USERNAME" ]
