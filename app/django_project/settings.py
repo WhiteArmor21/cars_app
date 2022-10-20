@@ -21,9 +21,11 @@ DEBUG = int(environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS').split(' ')
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 CORS_ALLOWED_ORIGINS = ['http://62.113.107.56:8080', ]
 
-CSRF_TRUSTED_ORIGINS = ['http://62.113.107.56:8080', ]
+CSRF_TRUSTED_ORIGINS = ['http://62.113.107.56:8080', 'https://matveypopov.store']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -122,5 +124,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = environ.get("HOST_EMAIL")
 EMAIL_HOST_PASSWORD = environ.get("EMAIL_PASSWORD")
 EMAIL_PORT = 587
-RECIPIENTS_EMAIL = [environ.get("RECIPIENT_EMAIL")]
+RECIPIENTS_EMAIL = environ.get("RECIPIENT_EMAIL").split(' ')
 DEFAULT_FROM_EMAIL = 'clearoutside.bot@gmail.com'
