@@ -4,5 +4,5 @@
 - use command "docker-compose up -d --build" for launch in dev mode.
 - use command "docker-compose -f docker-compose.prod.yml up -d --build" for launch in prod mode
 - since that moment, the service will be available by url "http://localhost:8000/"
-To delete containers use:
+## To delete containers use:
 - "docker-compose down -v"
